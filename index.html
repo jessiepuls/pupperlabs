@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+    <title>Pupper Labs</title>
+  </head>
+  <body style='background-color:#424242;text-align:center'>
+    <div id='header' style='padding-bottom:10px;text-align:left;border-bottom:1px solid black;'>
+      <img src='pupper.png' width='130px' height='46px' />
+    </div>
+    <div id='content' style='margin:0 auto; padding-top:20px;'></div>
+    <div id='footer'></div>
+    <script type='text/javascript'>
+      giphyUrl = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=pupper" 
+      $.get(giphyUrl, function(data) {
+        image_url = data.data.image_original_url;
+        content = "<img src='" + image_url + "' />";
+        $("#content").html(content);
+      });
+    </script>
+
+  </body>
+</html>
