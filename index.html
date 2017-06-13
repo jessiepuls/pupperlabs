@@ -5,12 +5,12 @@
   </head>
   <body style='background-color:#424242;text-align:center'>
     <div id='header' style='padding-bottom:10px;text-align:left;border-bottom:1px solid black;'>
-      <img src='pupper.png' width='130px' height='46px' />
+      <img src='pupper.png' width='250px' />
     </div>
     <div id='content' style='margin:0 auto; padding-top:20px;'></div>
     <div id='footer'></div>
     <script type='text/javascript'>
-      giphyUrl = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=pupper" 
+      giphyUrl = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=pupper"
       $.get(giphyUrl, function(data) {
         image_url = data.data.image_original_url;
         content = "<img src='" + image_url + "' />";
